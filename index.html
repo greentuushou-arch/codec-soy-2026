@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>コードシーギフトセレクションへ応援よろしくお願いします｜ショップ・オブ・ザ・イヤー2026 投票受付中</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Jost:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* スイーツギフト特集(gold/patie/c/sweets)の配色に合わせる */
+  --ink:#211d16;
+  --ink-2:#5f574a;
+  --paper:#fbf7ee;
+  --paper-d:#f3ecd9;
+  --gold:#ecc501;
+  --terra:#cb4d00;
+  --terra-d:#9e3b00;
+  --red:#b60f00;
+  --line:rgba(33,29,22,.14);
+  --tex-terra:var(--terra) url("images/bg_1.jpg") repeat;
+  --tex-paper:var(--paper) url("images/bg_2.jpg") repeat;
+  --sans:"Noto Sans JP",sans-serif;
+  --en:"Jost","Noto Sans JP",sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#e7dfcd;color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.9;letter-spacing:.04em;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:750px;margin:0 auto;background:var(--tex-paper);overflow:hidden;padding-bottom:84px}
+.in{padding:0 24px}
+.en{font-family:var(--en);letter-spacing:.04em}
+
+/* ---------- 共通見出し（スイーツ特集の吹き出しキッカー） ---------- */
+.kicker{position:relative;display:inline-flex;align-items:center;justify-content:center;min-width:132px;padding:0 22px;aspect-ratio:2/1;border-radius:50%;background:var(--tex-terra);color:#fff;font-family:var(--en);font-weight:700;font-size:17px;letter-spacing:.12em}
+.kicker::after{content:"";position:absolute;bottom:-18px;left:42%;width:18px;height:24px;background:var(--tex-terra);clip-path:polygon(0 0,100% 0,20% 100%)}
+.kicker.ink,.kicker.ink::after{background:var(--ink)}
+.head{text-align:center;margin-bottom:36px}
+.head h2{font-weight:900;font-size:26px;line-height:1.55;letter-spacing:.08em;margin-top:26px}
+.head .lead{margin-top:16px;font-size:15px;color:var(--ink-2)}
+.dark .head h2{color:var(--paper)}
+.dark .head .lead{color:rgba(251,247,238,.72)}
+
+/* ---------- 目玉（ミーツ兄弟の目） ---------- */
+.eye{position:relative;display:inline-block;width:.74em;height:.74em;margin:0 .02em;border-radius:50%;background:#fff;border:.07em solid var(--ink);vertical-align:-.02em}
+.eye i{position:absolute;top:50%;left:50%;width:46%;height:46%;margin:-23% 0 0 -23%;border-radius:50%;background:var(--ink);transition:transform .12s ease-out}
+
+/* ---------- 投票ボタン（シャイン） ---------- */
+.vote{position:relative;display:flex;align-items:center;justify-content:center;gap:12px;width:100%;max-width:520px;min-height:72px;margin:0 auto;padding:0 20px;border-radius:999px;background:var(--ink);color:#fff;font-weight:900;font-size:17px;letter-spacing:.06em;box-shadow:0 5px 0 rgba(0,0,0,.35),0 10px 22px rgba(0,0,0,.2);overflow:hidden;transition:transform .15s,box-shadow .15s}
+.vote:active{transform:translateY(3px);box-shadow:0 2px 0 rgba(0,0,0,.35),0 5px 12px rgba(0,0,0,.2)}
+.vote .arw{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--gold);color:var(--ink);font-size:14px;flex:none}
+.vote::after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.4),transparent);transform:skewX(-20deg);pointer-events:none}
+.vote.cd-shine-play::after{animation:shine 1.6s ease-in-out}
+@keyframes shine{to{left:130%}}
+.vote-note{text-align:center;font-size:14px;color:var(--ink-2);margin-top:14px;line-height:1.7}
+
+/* ---------- ヘッダー ---------- */
+.site{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 20px;background:var(--paper);border-bottom:1px solid var(--line)}
+.site img{width:150px}
+.site span{font-size:13px;letter-spacing:.08em;color:var(--ink-2);text-align:right;line-height:1.5}
+
+/* ---------- FV ---------- */
+.fv{position:relative;background:var(--tex-terra);color:#fff;padding:30px 24px 40px;overflow:hidden}
+.fv-tag{position:relative;z-index:2;text-align:center;font-weight:700;font-size:15px;letter-spacing:.14em}
+.fv-title{position:relative;z-index:2;text-align:center;margin-top:16px;font-family:var(--en);font-weight:800;color:var(--ink);line-height:.98;letter-spacing:.02em;font-size:clamp(46px,13.4vw,92px)}
+.fv-title .rk{display:block;font-size:.26em;font-weight:600;letter-spacing:.42em;color:#fff;margin-bottom:.7em}
+.fv-title .yr{display:block;margin-top:.08em;font-size:1.22em;color:#fff}
+.fv-open{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;gap:6px;margin-top:22px;background:var(--ink);border-radius:18px;padding:12px 14px 14px}
+.fv-open .o{white-space:nowrap;font-weight:900;font-size:clamp(38px,11.4vw,58px);line-height:1.15;letter-spacing:.06em;color:var(--gold)}
+.fv-open .dl{display:flex;align-items:baseline;gap:6px;font-size:15px;font-weight:700;color:var(--paper);border-top:1px solid rgba(251,247,238,.25);padding-top:8px}
+.fv-open .dl .d{font-family:var(--en);font-size:28px;line-height:1;color:#fff}
+.fv-pt{position:relative;z-index:2;margin-top:14px;background:var(--paper);color:var(--ink);border-radius:18px;padding:16px 14px 14px;text-align:center;line-height:1.5}
+.fv-pt .l1{font-size:15px;font-weight:700;color:var(--terra)}
+.fv-pt .l2{font-size:15px;font-weight:700;margin-top:4px}
+.fv-pt .l3{font-weight:900;font-size:clamp(22px,6.6vw,34px);line-height:1.35;margin-top:4px}
+.fv-pt .l3 .p{font-family:var(--en);font-size:1.5em;line-height:1;color:var(--red);letter-spacing:.01em}
+.fv-pt .l3 .p small{font-family:var(--sans);font-size:.6em}
+.fv-pt .l3 .w{display:block;white-space:nowrap}
+.fv-pt .l3 .w b{font-family:var(--en);font-size:1.15em;color:var(--red)}
+.fv-pt .nt{font-size:13px;color:var(--ink-2);margin-top:8px}
+.fv-copy{position:relative;z-index:2;text-align:center;margin-top:34px;font-weight:900;font-size:clamp(24px,6.8vw,38px);line-height:1.6;letter-spacing:.08em}
+.fv-copy em{font-style:normal;color:var(--gold)}
+.fv-sub{position:relative;z-index:2;text-align:center;font-size:15px;line-height:1.9;margin-top:14px;color:rgba(255,255,255,.88)}
+.fv-goods{position:relative;z-index:1;display:grid;grid-template-columns:repeat(5,1fr);align-items:end;gap:4px;margin:26px -14px 0}
+.fv-goods img{width:100%;filter:drop-shadow(0 10px 12px rgba(80,25,0,.35))}
+.fv-goods img:nth-child(odd){transform:translateY(-6px)}
+.fv-cta{position:relative;z-index:2;margin-top:28px}
+.fv-cta .vote-note{color:rgba(255,255,255,.82)}
+
+/* ---------- 投票スタート ---------- */
+.start{padding:54px 24px 44px;text-align:center}
+.start h2{font-weight:900;font-size:22px;line-height:1.65;letter-spacing:.06em;margin-top:28px}
+.start h2 b{color:var(--terra)}
+.period{display:inline-block;margin-top:22px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 22px;font-size:15px;line-height:1.7}
+.period dt{font-family:var(--en);font-weight:700;color:var(--terra);letter-spacing:.14em}
+
+/* ---------- メッセージカード ---------- */
+.card-sec{padding:8px 16px 60px}
+.envelope{position:relative;background:var(--tex-terra);border-radius:22px;padding:58px 16px 18px}
+.envelope::before{content:"";position:absolute;top:0;left:0;right:0;height:46px;background:rgba(0,0,0,.08);clip-path:polygon(0 0,100% 0,50% 100%)}
+.envelope .seal{position:absolute;top:18px;left:50%;z-index:2;display:grid;place-items:center;width:62px;height:62px;margin-left:-31px;border-radius:50%;background:var(--gold);color:var(--ink);font-family:var(--en);font-weight:700;font-size:12px;line-height:1.15;letter-spacing:.08em;text-align:center;box-shadow:0 4px 10px rgba(0,0,0,.2)}
+.card{position:relative;background:#fff;border-radius:6px;padding:52px 22px 34px;font-family:var(--sans);font-weight:500;font-size:17px;line-height:2.05;color:#2c261d;box-shadow:0 10px 24px rgba(80,25,0,.25)}
+.card p+p{margin-top:1.025em}
+.card .to{font-size:18px;font-weight:700;color:var(--terra)}
+.card mark{background:linear-gradient(transparent 62%,rgba(236,197,1,.5) 62%);color:inherit}
+.card .sign{margin-top:1.6em;text-align:right}
+.card .sign small{display:block;font-size:15px;color:var(--ink-2)}
+.card .sign img{display:inline-block;width:150px;margin-top:6px}
+
+/* ---------- 数字で見るコードシー ---------- */
+.nums{background:var(--ink);color:var(--paper);padding:64px 0}
+.num-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.num{border:1px solid rgba(251,247,238,.18);border-radius:18px;padding:22px 10px 18px;text-align:center;line-height:1.4}
+.num .v{display:block;font-family:var(--en);font-weight:700;font-size:46px;line-height:1;color:var(--gold)}
+.num .v small{font-family:var(--sans);font-size:.36em;font-weight:700;color:var(--paper);margin-left:2px}
+.num .v.md{font-size:32px;line-height:1.43;white-space:nowrap}
+.num .v.sm{font-size:30px;line-height:1.53}
+.num .l{display:block;margin-top:10px;font-size:15px;font-weight:700}
+.num .l .en{font-size:12px;letter-spacing:.02em;white-space:nowrap}
+.num .s{display:block;margin-top:4px;font-size:13px;color:rgba(251,247,238,.6)}
+.nums .msg{margin-top:38px;text-align:center;font-size:17px;font-weight:700;line-height:2.1;letter-spacing:.06em}
+.nums .nt{margin-top:14px;text-align:center;font-size:13px;color:rgba(251,247,238,.5)}
+
+/* ---------- ちょうどいい3つのこと ---------- */
+.good{padding:64px 0 60px}
+.pts{display:grid;gap:16px}
+.pt{display:grid;grid-template-columns:38% 1fr;gap:16px;align-items:center;background:#fff;border-radius:18px;padding:14px;box-shadow:0 1px 0 var(--line)}
+.pt .ph{aspect-ratio:1/1;border-radius:12px;overflow:hidden;background:var(--paper-d)}
+.pt .ph img{width:100%;height:100%;object-fit:cover}
+.pt .ph.ic{display:grid;place-items:center;background:var(--tex-terra);color:#fff;font-weight:900;font-size:15px;line-height:1.55;text-align:center}
+.pt .ph.ic b{display:block;font-family:var(--en);font-size:30px;line-height:1.1;color:var(--gold)}
+.pt .no{font-family:var(--en);font-weight:600;font-size:14px;letter-spacing:.12em;color:var(--terra)}
+.pt h3{font-weight:900;font-size:17px;line-height:1.5;margin-top:2px}
+.pt p{font-size:15px;color:var(--ink-2);line-height:1.75;margin-top:6px}
+
+/* ---------- 声 ---------- */
+.voice{background:var(--paper-d);padding:64px 0 60px}
+.voice .meets{width:150px;margin:0 auto 8px}
+.bubbles{display:grid;gap:14px}
+.bb{position:relative;background:#fff;border-radius:22px;padding:14px 20px;font-family:var(--sans);font-weight:500;font-size:17px;line-height:1.7}
+.bb::after{content:"";position:absolute;bottom:-10px;width:18px;height:14px;background:#fff;clip-path:polygon(0 0,100% 0,30% 100%)}
+.bb:nth-child(odd){margin-right:24px}
+.bb:nth-child(odd)::after{left:36px}
+.bb:nth-child(even){margin-left:24px}
+.bb:nth-child(even)::after{right:36px;transform:scaleX(-1)}
+.voice .after{text-align:center;margin-top:34px;font-size:15px;line-height:2}
+
+/* ---------- 投票方法 ---------- */
+.how{padding:64px 0 56px}
+.steps{display:grid;gap:12px}
+.steps li{list-style:none;display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:center;background:#fff;border-radius:18px;padding:18px}
+.steps .sn{display:grid;place-items:center;width:58px;height:58px;border-radius:50%;background:var(--tex-terra);color:#fff;font-family:var(--en);font-weight:600;font-size:12px;letter-spacing:.1em;line-height:1.05;text-align:center}
+.steps .sn b{display:block;font-size:24px;letter-spacing:0}
+.steps h3{font-size:16px;font-weight:900;line-height:1.5}
+.steps p{font-size:15px;color:var(--ink-2);line-height:1.7;margin-top:2px}
+
+/* ---------- 締め ---------- */
+.last{background:var(--tex-terra);color:#fff;padding:64px 24px 60px;text-align:center}
+.last .big{font-family:var(--en);font-weight:800;color:var(--ink);font-size:clamp(40px,11vw,64px);line-height:1;letter-spacing:.02em}
+.last h2{font-weight:900;font-size:26px;line-height:1.6;letter-spacing:.06em;margin:22px 0 30px}
+.last .vote-note{color:rgba(255,255,255,.85)}
+
+/* ---------- 商品 ---------- */
+.items{background:#fff;padding:64px 0 60px}
+.sub-head{display:flex;align-items:center;gap:14px;margin:0 0 22px;font-weight:900;font-size:18px;letter-spacing:.06em}
+.sub-head::before,.sub-head::after{content:"";flex:1;height:1px;background:var(--ink)}
+.sub-head.mt{margin-top:52px}
+.sub-head .en{font-weight:600;font-size:14px;color:var(--terra);display:block;text-align:center;letter-spacing:.14em}
+.box-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:22px 14px}
+.it .ph{display:block;aspect-ratio:1/1;border-radius:14px;overflow:hidden;background:var(--paper-d)}
+.it .ph img{width:100%;height:100%;object-fit:cover}
+.it h4{font-size:15px;font-weight:700;line-height:1.55;margin-top:10px}
+.it .price{font-family:var(--en);font-weight:700;font-size:17px;color:var(--red);margin-top:2px}
+.it .price small{font-family:var(--sans);font-size:13px;font-weight:500;color:var(--ink-2)}
+.it .tg{font-size:13px;color:var(--ink-2);line-height:1.6}
+.box-lead{font-size:15px;color:var(--ink-2);text-align:center;margin:-8px 0 20px}
+.links{display:grid;gap:12px;margin-top:44px}
+.btn{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:60px;padding:0 24px;border:1.5px solid var(--ink);border-radius:999px;font-weight:700;font-size:15px;letter-spacing:.06em;transition:background .25s,color .25s}
+.btn::after{content:"→";font-family:var(--en)}
+.btn:hover{background:var(--ink);color:var(--paper)}
+
+/* ---------- 追従ボタン ---------- */
+.fixed{position:fixed;left:0;right:0;bottom:0;z-index:50;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(203,77,0,.94);transform:translateY(110%);transition:transform .35s}
+.fixed.on{transform:none}
+.fixed .vote{min-height:56px;font-size:16px}
+
+@media (min-width:768px){
+  .in{padding:0 48px}
+  .site{padding:16px 32px}
+  .site img{width:190px}
+  .fv{padding:40px 48px 56px}
+  .fv-open{flex-direction:row;justify-content:space-between;padding:14px 30px}
+  .fv-open .dl{flex-direction:column;align-items:center;gap:2px;border-top:0;border-left:1px solid rgba(251,247,238,.25);padding:0 0 0 24px}
+  .fv-open .dl .d{font-size:36px}
+  .fv-pt{padding:22px 20px 18px}
+  .fv-pt .l2{font-size:18px}
+  .fv-goods{margin:30px 0 0;gap:10px}
+  .kicker{font-size:19px;min-width:150px}
+  .head h2{font-size:31px}
+  .start h2{font-size:29px}
+  .card-sec{padding:8px 48px 64px}
+  .envelope{padding:64px 24px 24px}
+  .card{padding:60px 48px 44px;font-size:18px}
+  .bb{font-size:18px}
+  .num .v{font-size:58px}
+  .num .v.md{font-size:46px}
+  .num .v.sm{font-size:36px;line-height:1.6}
+  .num .l .en{font-size:14px}
+  .pt{grid-template-columns:200px 1fr;gap:24px;padding:18px}
+  .pt h3{font-size:19px}
+  .pt p{font-size:15px}
+  .bb:nth-child(odd){margin-right:140px}
+  .bb:nth-child(even){margin-left:140px}
+  .steps{grid-template-columns:repeat(3,1fr)}
+  .steps li{grid-template-columns:1fr;justify-items:center;text-align:center;padding:26px 16px}
+  .grid{grid-template-columns:repeat(4,1fr)}
+  .links{grid-template-columns:1fr 1fr}
+  .fixed{display:none}
+  .wrap{padding-bottom:0}
+}
+@media (prefers-reduced-motion:reduce){
+  .vote.cd-shine-play::after{animation:none}
+  .eye i{transition:none}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="site">
+    <a href="https://www.rakuten.co.jp/patie/" target="_blank" rel="noopener"><img src="images/logo_01.svg" alt="code℃ by SOMMELIER@GIFT" width="190" height="17"></a>
+    <span>SOY2026<br>投票のお願い</span>
+  </header>
+
+  <!-- ===== FV ===== -->
+  <section class="fv" id="fv">
+    <p class="fv-tag">コードシーから、ひとつお願いがあります</p>
+    <h1 class="fv-title" aria-label="RAKUTEN SHOP OF THE YEAR 2026">
+      <span class="rk">RAKUTEN</span>SH<span class="eye" aria-hidden="true"><i></i></span>P <span class="eye" aria-hidden="true"><i></i></span>F<br>THE YEAR<span class="yr">2026</span>
+    </h1>
+    <p class="fv-open"><span class="o">投票受付中！</span><span class="dl">投票は<span class="d">11.30</span>(月)09:59まで</span></p>
+    <div class="fv-pt">
+      <p class="l1">あなたの1票でベストショップが決まる！</p>
+      <p class="l2">お気に入りのショップに投票すると</p>
+      <p class="l3"><span class="w">最大<span class="p">10,000<small>ポイント</small></span>が</span><span class="w"><b>10</b>万名様に当たる！</span></p>
+      <p class="nt">※詳細は楽天市場の投票ページをご確認ください</p>
+    </div>
+    <p class="fv-copy">あなたの<em>「ちょうどいい」</em>に<br>一票をください。</p>
+    <p class="fv-sub">コードシーギフトセレクションを<br>「ショップ・オブ・ザ・イヤー2026」に。<br>投票と応援メッセージを<br>よろしくお願いいたします。</p>
+    <div class="fv-goods" aria-hidden="true">
+      <img src="images/top_food-047-b.png" alt="" width="700" height="479">
+      <img src="images/top_marutaka-409.png" alt="" width="700" height="469">
+      <img src="images/top_ad-sweets-5293.png" alt="" width="700" height="700">
+      <img src="images/top_food-01539_2.png" alt="" width="700" height="516">
+      <img src="images/top_food-050.png" alt="" width="377" height="700">
+    </div>
+    <div class="fv-cta">
+      <a class="vote" data-vote href="#">コードシーに投票する<span class="arw">▶</span></a>
+      <p class="vote-note">楽天市場の投票ページが開きます</p>
+    </div>
+  </section>
+
+  <!-- ===== 投票スタート ===== -->
+  <section class="start">
+    <span class="kicker">START!</span>
+    <h2>楽天市場<br><b>ショップ・オブ・ザ・イヤー<br>2026</b> の投票が<br>始まりました</h2>
+    <dl class="period"><dt>VOTING PERIOD</dt><dd>2026年11月1日（日）〜<br>11月30日（月）09:59まで</dd></dl>
+  </section>
+
+  <!-- ===== メッセージカード ===== -->
+  <section class="card-sec">
+    <div class="envelope">
+      <span class="seal">THANK<br>YOU</span>
+      <div class="card">
+        <p class="to">お客様へ</p>
+        <p>いつもコードシーギフトセレクションをご利用いただき、誠にありがとうございます。<br>11月1日より、楽天市場「ショップ・オブ・ザ・イヤー2026」の投票が始まりました。</p>
+        <p>私たちは、贈る人にも受け取る人にも<mark>「ちょうどいい」ギフト</mark>をお届けしたいという思いで、カタログギフトやスイーツ、暮らしの贈り物をひとつひとつ選んでまいりました。</p>
+        <p>今年は、オリジナルの<mark>カタログギフトBOX</mark>や、ミーツ兄弟と探すスイーツ特集など、新しい挑戦にも取り組むことができました。これも、いつもご利用くださるお客様のおかげです。</p>
+        <p>「こんなギフトがあったらうれしい」「こんな特集が見てみたい」など、ぜひ皆様のお声をお聞かせください。<br>いただいたメッセージは、スタッフ一同の大きな励みになります。</p>
+        <p>コードシーギフトセレクションに、あなたの一票をお寄せいただけますと幸いです。</p>
+        <p class="sign"><small>2026年11月</small>コードシーギフトセレクション<br>スタッフ一同</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 数字で見るコードシー ===== -->
+  <section class="nums dark">
+    <div class="in">
+      <div class="head">
+        <span class="kicker">THANKS</span>
+        <h2>数字で見る<br>コードシー</h2>
+      </div>
+      <div class="num-grid">
+        <p class="num"><span class="v">14<small>周年</small></span><span class="l">楽天市場とともに</span><span class="s">14 YEARS</span></p>
+        <p class="num"><span class="v">4.75</span><span class="l">ショップ評価</span><span class="s">5点満点中</span></p>
+        <p class="num"><span class="v md">10,274<small>件</small></span><span class="l">いただいたレビュー</span><span class="s">REVIEWS</span></p>
+        <p class="num"><span class="v sm">2026.9</span><span class="l"><span class="en">SHOP OF THE MONTH</span><br>兵庫県 都道府県賞</span><span class="s">AWARD</span></p>
+      </div>
+      <p class="msg">たくさんの「ありがとう」に<br>支えられて、ここまで<br>歩んでこられました</p>
+      <p class="nt">※ショップ評価・レビュー件数は<br>2026年10月30日時点</p>
+    </div>
+  </section>
+
+  <!-- ===== ちょうどいい3つのこと ===== -->
+  <section class="good">
+    <div class="in">
+      <div class="head">
+        <span class="kicker">POINT</span>
+        <h2>コードシーの<br>「ちょうどいい」</h2>
+        <p class="lead">贈る人も、受け取る人も<br>うれしいお店でありたいから</p>
+      </div>
+      <div class="pts">
+        <article class="pt">
+          <span class="ph ic"><span><b>FREE</b>のし・包装<br>メッセージ<br>カード</span></span>
+          <div><span class="no">01 — Gift Wrapping</span><h3>のし・包装・<br>メッセージカードが無料</h3><p>大切な贈り物を、安心して任せていただけるように。ひと手間を、私たちが引き受けます。</p></div>
+        </article>
+        <article class="pt">
+          <span class="ph"><img src="images/box-a.jpg" alt="カタログギフトBOX バウムクーヘンの化粧箱" loading="lazy"></span>
+          <div><span class="no">02 — Original Gift</span><h3>ここだけのカタログギフトBOX</h3><p>お菓子やお花とカタログをひと箱に。「何を贈るか」と「選ぶ楽しさ」を一緒に届けます。</p></div>
+        </article>
+        <article class="pt">
+          <span class="ph"><img src="images/meets_brothers.png" alt="ミーツ兄弟" loading="lazy" style="object-fit:contain;padding:18%"></span>
+          <div><span class="no">03 — Find Your Gift</span><h3>相手とシーンで選べる特集</h3><p>だれに贈る？予算は？迷ったときは、ミーツ兄弟と一緒に「ちょうどいい」を探してください。</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== お声 ===== -->
+  <section class="voice">
+    <div class="in">
+      <div class="head">
+        <span class="kicker ink">VOICE</span>
+        <h2>皆様のお声を<br>お聞かせください</h2>
+        <p class="lead">投票ページの応援メッセージ欄に<br>ひとことお寄せいただけるとうれしいです</p>
+      </div>
+      <div class="bubbles">
+        <p class="bb">ちょうどいいギフトが見つかりました</p>
+        <p class="bb">ラッピングがていねいで安心して贈れた</p>
+        <p class="bb">こんな特集を、また見てみたい</p>
+        <p class="bb">いつもすてきな贈り物をありがとう</p>
+      </div>
+      <p class="after">いただいたご意見や温かいメッセージは<br>スタッフ一同の大きな励みになります</p>
+    </div>
+  </section>
+
+  <!-- ===== 投票方法 ===== -->
+  <section class="how">
+    <div class="in">
+      <div class="head">
+        <span class="kicker">HOW TO</span>
+        <h2>投票はかんたん<br>3ステップ</h2>
+      </div>
+      <ol class="steps">
+        <li><span class="sn">STEP<b>1</b></span><div><h3>投票ボタンをタップ</h3><p>このページの投票ボタンから、楽天市場の投票ページへ</p></div></li>
+        <li><span class="sn">STEP<b>2</b></span><div><h3>楽天会員でログイン</h3><p>お持ちの楽天会員IDでログインしてください</p></div></li>
+        <li><span class="sn">STEP<b>3</b></span><div><h3>投票＆応援メッセージ</h3><p>コードシーに一票と、ひとことメッセージを</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ===== 締め ===== -->
+  <section class="last" id="last">
+    <p class="big" aria-hidden="true">THANK Y<span class="eye"><i></i></span>U</p>
+    <h2>コードシーに<br>あなたの一票を</h2>
+    <a class="vote" data-vote href="#">コードシーに投票する<span class="arw">▶</span></a>
+    <p class="vote-note">投票は11月30日（月）09:59まで<br>投票すると最大10,000ポイントが10万名様に当たる！</p>
+  </section>
+
+  <!-- ===== 商品 ===== -->
+  <section class="items">
+    <div class="in">
+      <div class="head">
+        <span class="kicker">PICK UP</span>
+        <h2>コードシーの<br>おすすめギフト</h2>
+        <p class="lead">はじめての方にも、ぜひ一度<br>手に取っていただきたい贈り物です</p>
+      </div>
+
+      <h3 class="sub-head"><span><span class="en">ORIGINAL</span>カタログギフトBOX</span></h3>
+      <p class="box-lead">カタログ＋お菓子やお花をひと箱に</p>
+      <div class="box-grid">
+        <a class="it" href="https://item.rakuten.co.jp/patie/code-sset-001/" target="_blank" rel="noopener"><span class="ph"><img src="images/box-a.jpg" alt="バウムクーヘンの化粧箱" loading="lazy"></span><h4>バウムクーヘンの化粧箱</h4><p class="price">5,000<small>円〜</small></p></a>
+        <a class="it" href="https://item.rakuten.co.jp/patie/code-sw2set-004/" target="_blank" rel="noopener"><span class="ph"><img src="images/box-c.jpg" alt="二段重 木箱" loading="lazy"></span><h4>二段重 木箱</h4><p class="price">7,000<small>円〜</small></p></a>
+        <a class="it" href="https://item.rakuten.co.jp/patie/code-fset-006/" target="_blank" rel="noopener"><span class="ph"><img src="images/box-e.jpg" alt="プリザーブドフラワー" loading="lazy"></span><h4>プリザーブドフラワー</h4><p class="price">10,000<small>円〜</small></p></a>
+      </div>
+
+      <h3 class="sub-head mt"><span><span class="en">SWEETS</span>ミーツ兄弟のおすすめ</span></h3>
+      <div class="grid">
+        <a class="it" href="https://item.rakuten.co.jp/patie/food-047-b/" target="_blank" rel="noopener"><span class="ph"><img src="https://image.rakuten.co.jp/patie/cabinet/sku5/food-047-3.jpg" alt="丹波焼菓子詰合せ" loading="lazy"></span><h4>5種類のお菓子が楽しめる丹波焼菓子詰合せ</h4><p class="price">3,790<small>円</small></p></a>
+        <a class="it" href="https://item.rakuten.co.jp/patie/food-924/" target="_blank" rel="noopener"><span class="ph"><img src="https://image.rakuten.co.jp/patie/cabinet/food/sweets5/food-924_s1.jpg" alt="ユーハイムのクッキー缶" loading="lazy"></span><h4>ユーハイムが贈るキュートなクッキー缶</h4><p class="price">2,160<small>円</small></p></a>
+        <a class="it" href="https://item.rakuten.co.jp/patie/suzette-001/" target="_blank" rel="noopener"><span class="ph"><img src="https://image.rakuten.co.jp/patie/cabinet/food/henri/henri1000_s1b.jpg" alt="アンリ・シャルパンティエのフィナンシェ" loading="lazy"></span><h4>アンリ・シャルパンティエの黄金フィナンシェ</h4><p class="price">1,350<small>円〜</small></p></a>
+        <a class="it" href="https://item.rakuten.co.jp/patie/food-097/" target="_blank" rel="noopener"><span class="ph"><img src="https://image.rakuten.co.jp/patie/cabinet/food/sweets7/food-097_s1all.jpg" alt="丹波栗の焼きモンブラン" loading="lazy"></span><h4>満足感たっぷり！丹波栗の焼きモンブラン</h4><p class="price">2,484<small>円</small></p></a>
+      </div>
+
+      <div class="links">
+        <a class="btn" href="https://www.rakuten.ne.jp/gold/patie/c/sweets/" target="_blank" rel="noopener">スイーツギフト特集を見る</a>
+        <a class="btn" href="https://www.rakuten.co.jp/patie/" target="_blank" rel="noopener">コードシー トップへ</a>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- スマホ追従ボタン -->
+<div class="fixed" id="fixed"><a class="vote" data-vote href="#">コードシーに投票する<span class="arw">▶</span></a></div>
+
+<script>
+(function(){
+  // ▼投票ページURL（ここだけ変えれば全ボタンに反映。s= は楽天のショップID 277407）
+  var VOTE_URL = 'https://award.rakuten.co.jp/?menu=shop&aid=101&l-id=SOY_fromshop&s=277407';
+  document.querySelectorAll('[data-vote]').forEach(function(a){
+    a.href = VOTE_URL;
+    a.target = '_blank';
+    a.rel = 'noopener';
+  });
+
+  // 投票ボタンのシャイン（ランダム間隔）
+  function shine(){
+    document.querySelectorAll('.vote').forEach(function(b){
+      b.classList.remove('cd-shine-play');
+      void b.offsetWidth;
+      b.classList.add('cd-shine-play');
+    });
+    setTimeout(shine, 2800 + Math.random() * 3400);
+  }
+  setTimeout(shine, 1200);
+
+  // ミーツ兄弟の目：ポインター（スマホはスクロール位置）を追いかける
+  var pupils = document.querySelectorAll('.eye i');
+  var MAX = 0.26; // 白目に対する黒目の最大移動量（比率）
+  function look(x, y){
+    pupils.forEach(function(p){
+      var r = p.parentNode.getBoundingClientRect();
+      var dx = x - (r.left + r.width / 2), dy = y - (r.top + r.height / 2);
+      var d = Math.hypot(dx, dy) || 1, k = Math.min(1, d / 160) * r.width * MAX;
+      p.style.transform = 'translate(' + (dx / d * k) + 'px,' + (dy / d * k) + 'px)';
+    });
+  }
+  window.addEventListener('pointermove', function(e){ look(e.clientX, e.clientY); }, {passive:true});
+  window.addEventListener('scroll', function(){
+    var t = window.scrollY / 140;
+    look(window.innerWidth * (0.5 + 0.45 * Math.cos(t)), window.innerHeight * (0.5 + 0.45 * Math.sin(t)));
+  }, {passive:true});
+
+  // FVを過ぎたら追従ボタン表示
+  // 締めの投票ボタンが見えている間は隠す
+  var fixed = document.getElementById('fixed'), shown = {};
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(e){ shown[e.target.id] = e.isIntersecting; });
+    fixed.classList.toggle('on', !shown.fv && !shown.last);
+  });
+  io.observe(document.getElementById('fv'));
+  io.observe(document.getElementById('last'));
+})();
+</script>
+</body>
+</html>
